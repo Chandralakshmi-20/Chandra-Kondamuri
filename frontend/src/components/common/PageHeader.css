@@ -1,0 +1,194 @@
+/* =========================================================
+PAGE HEADER
+========================================================= */
+
+.page-header {
+width: 100%;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 24px;
+margin-bottom: 24px;
+box-sizing: border-box;
+}
+
+.page-header > div:first-child {
+min-width: 0;
+}
+
+/* =========================================================
+PAGE TITLE
+========================================================= */
+
+.page-header h1 {
+margin: 10px 0 6px;
+color: #4f46e5 !important;
+font-size: 28px;
+font-weight: 700;
+line-height: 1.25;
+letter-spacing: -0.4px;
+}
+
+.page-header p {
+margin: 0;
+color: #667085;
+font-size: 14px;
+line-height: 1.6;
+}
+
+/* =========================================================
+BACK BUTTON
+========================================================= */
+
+.back-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+min-height: 36px;
+padding: 8px 14px;
+border: 1px solid #c7d2fe;
+border-radius: 8px;
+background: #eef2ff;
+color: #4f46e5;
+font-family: inherit;
+font-size: 13px;
+font-weight: 600;
+cursor: pointer;
+transition:
+background 0.2s ease,
+border-color 0.2s ease,
+color 0.2s ease,
+box-shadow 0.2s ease,
+transform 0.2s ease;
+}
+
+.back-button:hover {
+background: #e0e7ff;
+border-color: #a5b4fc;
+color: #4338ca;
+box-shadow: 0 2px 6px rgba(79, 70, 229, 0.15);
+}
+
+.back-button:active {
+transform: translateY(1px);
+box-shadow: none;
+}
+
+.back-button svg {
+width: 17px;
+height: 17px;
+flex-shrink: 0;
+stroke-width: 2.2;
+}
+
+/* =========================================================
+RIGHT SIDE ACTION
+========================================================= */
+
+.page-header > div:last-child {
+flex-shrink: 0;
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+.page-header {
+gap: 16px;
+margin-bottom: 20px;
+}
+
+.page-header h1 {
+font-size: 24px;
+}
+
+.page-header p {
+font-size: 13px;
+}
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+.page-header {
+flex-direction: column;
+align-items: stretch;
+gap: 0;
+margin-top: 16px;
+margin-bottom: 20px;
+}
+
+.page-header > div:first-child {
+width: 100%;
+}
+
+.back-button {
+min-height: 38px;
+padding: 8px 14px;
+font-size: 13px;
+}
+
+.page-header h1 {
+margin-top: 18px;
+margin-bottom: 6px;
+font-size: 22px;
+line-height: 1.3;
+}
+
+.page-header p {
+font-size: 13px;
+line-height: 1.55;
+}
+
+.page-header > div:last-child {
+width: 100%;
+margin-top: 14px;
+}
+}
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+.page-header {
+margin-top: 16px;
+margin-bottom: 18px;
+}
+
+.back-button {
+min-height: 38px;
+padding: 8px 13px;
+}
+
+.page-header h1 {
+margin-top: 16px;
+font-size: 21px;
+}
+
+.page-header p {
+font-size: 12.5px;
+}
+}
+
+/* =========================================================
+VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+.page-header {
+margin-top: 14px;
+}
+
+.page-header h1 {
+font-size: 20px;
+}
+
+.page-header p {
+font-size: 12px;
+}
+}

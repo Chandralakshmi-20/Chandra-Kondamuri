@@ -1,0 +1,462 @@
+/* =========================================================
+   AUTH PAGE
+   ========================================================= */
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  background: #f6f8fb;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.auth-left {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+  padding: 42px 58px;
+
+  background: #111827;
+  color: #ffffff;
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.auth-brand .brand-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+  background: #4f46e5;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.auth-brand > span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.auth-content {
+  max-width: 560px;
+  margin: auto 0;
+}
+
+.auth-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  color: #a5b4fc;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.auth-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.auth-content h1 span {
+  color: #818cf8;
+}
+
+.auth-content p {
+  max-width: 500px;
+  margin: 22px 0 0;
+
+  color: #98a2b3;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.auth-footer {
+  color: #667085;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.auth-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+  background: #f6f8fb;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+
+  padding: 38px;
+
+  border: 1px solid #e8ebf1;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(16, 24, 40, 0.06);
+}
+
+.login-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.login-card h2 {
+  margin: 0 0 8px;
+
+  color: #172033;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.login-card > p {
+  margin: 0 0 25px;
+
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card label {
+  margin-bottom: 8px;
+
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EMAIL INPUT
+   ========================================================= */
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 46px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #98a2b3;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.input-wrapper input {
+  width: 100%;
+
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #172033;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.input-wrapper input::placeholder {
+  color: #98a2b3;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.auth-error {
+  margin-top: 12px;
+  padding: 10px 12px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.primary-button {
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 18px;
+  padding: 11px 16px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #4338ca;
+  box-shadow: 0 5px 14px rgba(79, 70, 229, 0.2);
+}
+
+.primary-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOGIN NOTE
+   ========================================================= */
+
+.login-note {
+  margin-top: 18px;
+  padding-top: 17px;
+
+  border-top: 1px solid #eef0f4;
+
+  color: #98a2b3;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* =========================================================
+   OTP
+   ========================================================= */
+
+.otp-box-container {
+  width: 100%;
+}
+
+.otp-digit-box {
+  box-sizing: border-box;
+
+  width: 45px !important;
+  height: 52px !important;
+
+  border: 1px solid #d0d5dd !important;
+  border-radius: 10px !important;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #172033;
+
+  font-family: inherit;
+  font-size: 22px !important;
+  font-weight: 600;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.otp-digit-box:focus {
+  border-color: #4f46e5 !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+
+/* =========================================================
+   CHANGE EMAIL
+   ========================================================= */
+
+.login-card .back-button {
+  margin: 18px auto 0;
+}
+
+
+/* =========================================================
+   AUTH LOADING
+   ========================================================= */
+
+.auth-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6f8fb;
+  color: #667085;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-left {
+    min-height: auto;
+    padding: 28px 35px;
+  }
+
+  .auth-content {
+    margin: 70px 0;
+  }
+
+  .auth-content h1 {
+    font-size: 40px;
+  }
+
+  .auth-footer {
+    display: none;
+  }
+
+  .auth-right {
+    min-height: 55vh;
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-left {
+    padding: 22px;
+  }
+
+  .auth-content {
+    margin: 50px 0 35px;
+  }
+
+  .auth-content h1 {
+    font-size: 32px;
+    letter-spacing: -0.8px;
+  }
+
+  .auth-content p {
+    font-size: 13px;
+  }
+
+  .auth-right {
+    padding: 22px 16px;
+  }
+
+  .login-card {
+    padding: 25px 20px;
+    border-radius: 13px;
+  }
+
+  .login-card h2 {
+    font-size: 22px;
+  }
+
+  .otp-box-container {
+    gap: 7px !important;
+  }
+
+  .otp-digit-box {
+    width: 40px !important;
+    height: 48px !important;
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .otp-box-container {
+    gap: 5px !important;
+  }
+
+  .otp-digit-box {
+    width: 37px !important;
+    height: 45px !important;
+  }
+}

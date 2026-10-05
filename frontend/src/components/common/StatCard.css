@@ -1,0 +1,189 @@
+/* =========================================================
+   COMMON STAT CARD
+   Used across the HRMS project
+========================================================= */
+
+.stat-card {
+  min-width: 0;
+  min-height: 130px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  background: #ffffff;
+
+  box-shadow: 0 2px 7px rgba(16, 24, 40, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #d9dff0;
+  box-shadow: 0 7px 18px rgba(16, 24, 40, 0.08);
+}
+
+/* =========================================================
+   STAT CARD BACKGROUND COLORS
+========================================================= */
+
+.stat-card:nth-child(1) {
+  background: #f5f7ff;
+  border-color: #e0e7ff;
+}
+
+.stat-card:nth-child(2) {
+  background: #f2fcfd;
+  border-color: #cffafe;
+}
+
+.stat-card:nth-child(3) {
+  background: #fff9f2;
+  border-color: #fed7aa;
+}
+
+.stat-card:nth-child(4) {
+  background: #f4fbf6;
+  border-color: #dcfce7;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef2ff;
+  border: 1px solid #e0e7ff;
+
+  color: #4f46e5;
+
+  box-sizing: border-box;
+}
+
+.stat-icon svg {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  stroke-width: 2;
+}
+
+
+/* =========================================================
+   DIFFERENT ICON COLORS
+========================================================= */
+
+/* 1st stat */
+.stat-card:nth-child(1) .stat-icon {
+  background: #eef2ff;
+  border-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+/* 2nd stat */
+.stat-card:nth-child(2) .stat-icon {
+  background: #ecfeff;
+  border-color: #cffafe;
+  color: #0891b2;
+}
+
+/* 3rd stat */
+.stat-card:nth-child(3) .stat-icon {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #ea580c;
+}
+
+/* 4th stat */
+.stat-card:nth-child(4) .stat-icon {
+  background: #f0fdf4;
+  border-color: #dcfce7;
+  color: #16a34a;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.stat-content {
+  min-width: 0;
+}
+
+.stat-content span {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #667085;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.stat-content h3 {
+  margin: 0;
+
+  color: #101828;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: -0.3px;
+}
+
+.stat-content small {
+  display: block;
+  margin-top: 7px;
+
+  color: #98a2b3;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .stat-card {
+    min-height: 115px;
+    padding: 16px 18px;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .stat-content h3 {
+    font-size: 21px;
+  }
+}

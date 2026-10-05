@@ -1,0 +1,683 @@
+
+/* ==================================================
+   TOPBAR
+   ================================================== */
+
+.topbar {
+  width: 100%;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 28px;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
+}
+
+/* ==================================================
+   SEARCH
+   ================================================== */
+.topbar-search-wrapper {
+  position: relative;
+  width: 420px;
+  max-width: 45%;
+  min-width: 280px;
+  flex-shrink: 0;
+  margin-left: 0;
+}
+
+.topbar-search {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: #f7f7f7;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  color: #777777;
+  box-sizing: border-box;
+}
+
+.topbar-search input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333333;
+}
+
+.topbar-search input::placeholder {
+  color: #999999;
+}
+
+/* ==================================================
+   SEARCH RESULTS
+   ================================================== */
+
+.search-results-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  max-height: 420px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  z-index: 1100;
+  box-sizing: border-box;
+}
+
+.search-result-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: #f7f8ff;
+}
+
+.search-result-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #eef2ff;
+  color: #4f46e5;
+  border-radius: 8px;
+}
+
+.search-result-content {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.search-result-content strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #172033;
+}
+
+.search-result-content span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #667085;
+}
+
+.search-result-item small {
+  flex-shrink: 0;
+  font-size: 11px;
+  color: #667085;
+  background: #f2f4f7;
+  padding: 4px 7px;
+  border-radius: 6px;
+}
+
+.search-result-empty {
+  padding: 18px;
+  text-align: center;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* ==================================================
+   TOPBAR ACTIONS
+   ================================================== */
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ==================================================
+   NOTIFICATION
+   ================================================== */
+
+.notification-button {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 10px;
+  color: #475467;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.notification-button:hover {
+  background: #f5f7ff;
+  border-color: #c7d2fe;
+  color: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+}
+
+.notification-button:active {
+  transform: translateY(0);
+}
+
+.notification-button:focus-visible {
+  outline: 3px solid rgba(79, 70, 229, 0.15);
+  outline-offset: 2px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+/* ==================================================
+   PROFILE
+   ================================================== */
+
+.profile-menu-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 9px;
+  border: 1px solid transparent;
+  background: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-menu:hover {
+  background: #f8f9ff;
+  border-color: #e5e7eb;
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
+}
+
+/* ==================================================
+   PROFILE AVATAR
+   ================================================== */
+
+.avatar,
+.dropdown-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #eef2ff;
+  color: #4f46e5;
+  border: 1px solid #e0e7ff;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+}
+
+.dropdown-avatar {
+  width: 42px;
+  height: 42px;
+  font-size: 13px;
+}
+
+/* ==================================================
+   PROFILE INFORMATION
+   ================================================== */
+
+.profile-info {
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.profile-info strong {
+  font-size: 14px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.profile-info span {
+  font-size: 12px;
+  color: #888888;
+  white-space: nowrap;
+}
+
+/* ==================================================
+   PROFILE ARROW
+   ================================================== */
+
+.profile-chevron {
+  color: #667085;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.profile-chevron.open {
+  transform: rotate(180deg);
+}
+
+.profile-menu:hover .profile-chevron {
+  color: #4f46e5;
+}
+
+/* ==================================================
+   PROFILE DROPDOWN
+   ================================================== */
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 250px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1200;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+   DROPDOWN PROFILE
+   ================================================== */
+
+.dropdown-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.dropdown-profile > div:last-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-profile strong {
+  font-size: 14px;
+  color: #333333;
+}
+
+.dropdown-profile span {
+  max-width: 165px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #888888;
+}
+
+/* ==================================================
+   DIVIDER
+   ================================================== */
+
+.dropdown-divider {
+  height: 1px;
+  margin: 6px 0;
+  background: #eeeeee;
+}
+
+/* ==================================================
+   DROPDOWN ITEMS
+   ================================================== */
+
+.dropdown-item {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  color: #444444;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.dropdown-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #667085;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f5f7ff;
+  color: #344054;
+}
+
+.dropdown-item:hover svg {
+  color: #4f46e5;
+  transform: translateX(1px);
+}
+
+/* ==================================================
+   LOGOUT
+   ================================================== */
+
+.logout-item {
+  color: #dc2626;
+}
+
+.logout-item svg {
+  color: #dc2626;
+}
+
+.logout-item:hover {
+  background: #fff5f5;
+  color: #b91c1c;
+}
+
+.logout-item:hover svg {
+  color: #b91c1c;
+}
+
+/* ==================================================
+   SIDEBAR PROFILE BUTTON
+   ================================================== */
+
+.sidebar-profile-button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* ==================================================
+   TABLET
+   1024px and below
+   ================================================== */
+
+@media (max-width: 1024px) {
+  .topbar {
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  .topbar-search-wrapper {
+    width: 300px;
+  }
+
+  .topbar-actions {
+    gap: 10px;
+  }
+}
+
+/* ==================================================
+   TABLET / SMALL LAPTOP
+   850px and below
+   ================================================== */
+
+@media (max-width: 850px) {
+
+  .topbar {
+    width: 100%;
+    min-height: 112px;
+    height: 112px;
+
+    display: grid;
+
+    /* Row 1:
+       left space for hamburger
+       middle flexible space
+       right for actions
+    */
+    grid-template-columns: 60px 1fr auto;
+
+    /* Row 1 = actions
+       Row 2 = search */
+    grid-template-rows: 52px 60px;
+
+    gap: 0;
+    padding: 0 18px 8px;
+
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  /* Search always stays in the second row */
+  .topbar-search-wrapper {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    margin: 0;
+    flex: none;
+  }
+
+  /* Notification + Profile stay in first row */
+  .topbar-actions {
+    grid-column: 3;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .profile-menu {
+    padding: 5px;
+  }
+
+  .profile-chevron {
+    display: none;
+  }
+}
+
+/* ==================================================
+   MOBILE
+   600px and below
+   ================================================== */
+
+@media (max-width: 600px) {
+
+  .topbar {
+    min-height: 112px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 54px 58px;
+    gap: 0;
+    padding: 0 12px 8px;
+    align-items: center;
+  }
+
+  .topbar-search-wrapper {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .topbar-search {
+    width: 100%;
+    height: 42px;
+  }
+
+  .topbar-actions {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .notification-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-menu {
+    padding: 4px;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .profile-dropdown {
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(250px, calc(100vw - 24px));
+  }
+
+  .search-results-dropdown {
+    width: 100%;
+    max-height: 55vh;
+  }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+   420px and below
+   ================================================== */
+
+@media (max-width: 420px) {
+  .topbar {
+    grid-template-rows: 52px 56px;
+    padding: 0 10px 8px;
+  }
+
+  .topbar-actions {
+    gap: 6px;
+  }
+
+  .notification-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .topbar-search {
+    height: 40px;
+    padding: 0 12px;
+  }
+
+  .topbar-search input {
+    font-size: 13px;
+  }
+
+  .search-result-item {
+    padding: 10px 12px;
+  }
+
+  .search-result-item small {
+    display: none;
+  }
+}
+
+/* ==================================================
+   VERY SMALL MOBILE
+   360px and below
+   ================================================== */
+
+@media (max-width: 360px) {
+  .topbar {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .topbar-actions {
+    gap: 4px;
+  }
+
+  .notification-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .topbar-search {
+    padding: 0 10px;
+  }
+}
+

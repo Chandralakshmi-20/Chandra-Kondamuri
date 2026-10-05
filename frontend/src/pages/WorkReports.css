@@ -1,0 +1,772 @@
+
+/* =========================================================
+   WORK REPORTS PAGE
+   ========================================================= */
+
+.work-reports-page {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.work-reports-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   ADD WORK REPORT BUTTON
+   ========================================================= */
+
+.work-reports-toolbar .text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 17px;
+  border: 1px solid #4f46e5;
+  border-radius: 9px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(79, 70, 229, 0.18);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.work-reports-toolbar .text-button:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+  box-shadow: 0 5px 12px rgba(79, 70, 229, 0.22);
+  transform: translateY(-1px);
+}
+
+.work-reports-toolbar .text-button:active {
+  transform: translateY(0);
+}
+
+.work-reports-toolbar .text-button svg {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.work-report-error {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.work-report-form-panel {
+  margin-bottom: 20px;
+}
+
+.work-report-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.work-report-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.work-report-full-field {
+  grid-column: 1 / -1;
+}
+
+.work-reports-page .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.work-reports-page .form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.work-reports-page .form-group input,
+.work-reports-page .form-group select,
+.work-reports-page .form-group textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #172033;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.work-reports-page .form-group input:focus,
+.work-reports-page .form-group select:focus,
+.work-reports-page .form-group textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.work-reports-page .form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+/* =========================================================
+   RANGE
+   ========================================================= */
+
+.work-reports-page .form-group input[type="range"] {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  accent-color: #4f46e5;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.work-report-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   SUBMIT REPORT BUTTON
+   ========================================================= */
+
+.work-report-form-actions .text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 18px;
+  border: 1px solid #4f46e5;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(79, 70, 229, 0.18);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.work-report-form-actions .text-button:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+  box-shadow: 0 5px 12px rgba(79, 70, 229, 0.22);
+  transform: translateY(-1px);
+}
+
+.work-report-form-actions .text-button:active {
+  transform: translateY(0);
+}
+
+.work-report-form-actions .text-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+   ========================================================= */
+
+.work-report-form-actions > button:first-child {
+  min-height: 40px;
+  padding: 10px 17px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #344054;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.work-report-form-actions > button:first-child:hover {
+  background: #f8fafc;
+  border-color: #98a2b3;
+  color: #172033;
+}
+
+.work-report-form-actions > button:first-child:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   REPORT GRID
+   ========================================================= */
+
+.work-reports-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  );
+  gap: 20px;
+}
+
+
+/* =========================================================
+   REPORT CARD
+   ========================================================= */
+
+.work-report-card {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.work-report-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.work-report-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.work-report-title svg {
+  flex-shrink: 0;
+  color: #4f46e5;
+}
+
+.work-report-title strong {
+  color: #172033;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.work-report-card .status-badge {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   EMPLOYEE
+   ========================================================= */
+
+.work-report-employee {
+  margin-top: 14px;
+  color: #344054;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PROJECT
+   ========================================================= */
+
+.work-report-card > p {
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.work-report-card > p strong {
+  color: #344054;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.work-report-description {
+  margin-top: 12px;
+  min-height: 45px;
+  color: #667085;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.work-report-date {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.work-report-date span {
+  display: flex;
+  align-items: center;
+  color: #667085;
+  font-size: 13px;
+}
+
+.work-report-date strong {
+  color: #344054;
+  margin-right: 4px;
+}
+
+.work-report-date-icon {
+  flex-shrink: 0;
+  margin-right: 6px;
+  color: #667085;
+}
+
+
+/* =========================================================
+   COMPLETION
+   ========================================================= */
+
+.work-report-completion {
+  margin-top: 16px;
+}
+
+.work-report-completion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.work-report-completion-header span {
+  color: #667085;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.work-report-completion-header strong {
+  color: #172033;
+  font-size: 13px;
+}
+
+.work-report-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.work-report-progress-fill {
+  height: 100%;
+  background: #4f46e5;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+
+/* =========================================================
+   TAG
+   ========================================================= */
+
+.work-report-tag {
+  margin-top: 14px;
+}
+
+.work-report-tag .status-badge {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   EDIT + DELETE ACTIONS
+   ========================================================= */
+
+.work-report-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #eef0f4;
+}
+
+
+/* EDIT BUTTON */
+
+.work-report-actions .icon-button:first-child {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.work-report-actions .icon-button:first-child:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* DELETE BUTTON */
+
+.work-report-actions .icon-button:last-child {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #dc2626;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.work-report-actions .icon-button:last-child:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #b91c1c;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .work-report-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-report-full-field {
+    grid-column: auto;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .work-reports-toolbar {
+    justify-content: stretch;
+  }
+
+  .work-reports-toolbar .text-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .work-reports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-report-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .work-report-form-actions button {
+    width: 100%;
+  }
+
+  .work-report-card-header {
+    flex-direction: column;
+  }
+
+  .work-report-card .status-badge {
+    align-self: flex-start;
+  }
+}
+
+
+
+/* =========================================================
+   WORK REPORT STATUS + TAG TEXT SIZE
+========================================================= */
+
+.work-report-card .status-badge {
+  font-size: 13px;
+}
+
+.work-report-card .status-badge svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Development / Tag */
+.work-report-tag .status-badge {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 11px;
+}
+
+
+
+/* =========================================================
+   SUCCESS TOAST
+   ========================================================= */
+
+.work-report-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  min-width: 280px;
+  max-width: 380px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #16a34a;
+  color: #ffffff;
+  border: 1px solid #22c55e;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.18);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DELETE CONFIRMATION OVERLAY
+   ========================================================= */
+
+.work-report-delete-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+
+/* =========================================================
+   DELETE CONFIRMATION BOX
+   ========================================================= */
+
+.work-report-delete-modal {
+  width: 100%;
+  max-width: 420px;
+  padding: 26px;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(16, 24, 40, 0.18);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DELETE ICON
+   ========================================================= */
+
+.work-report-delete-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+
+/* =========================================================
+   DELETE TITLE
+   ========================================================= */
+
+.work-report-delete-modal h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DELETE MESSAGE
+   ========================================================= */
+
+.work-report-delete-modal p {
+  margin: 10px 0 8px;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   REPORT NAME
+   ========================================================= */
+
+.work-report-delete-name {
+  display: block;
+  margin-top: 6px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   DELETE ACTIONS
+   ========================================================= */
+
+.work-report-delete-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+
+/* CANCEL */
+
+.work-report-delete-cancel {
+  min-width: 100px;
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #344054;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.work-report-delete-cancel:hover {
+  background: #f8fafc;
+  border-color: #98a2b3;
+}
+
+
+/* DELETE */
+
+.work-report-delete-confirm {
+  min-width: 100px;
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  background: #dc2626;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.work-report-delete-confirm:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+
+
+/* DISABLED */
+
+.work-report-delete-cancel:disabled,
+.work-report-delete-confirm:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   RESPONSIVE DELETE BOX
+   ========================================================= */
+
+@media (max-width: 500px) {
+  .work-report-delete-modal {
+    padding: 22px;
+  }
+
+  .work-report-delete-actions {
+    flex-direction: column-reverse;
+  }
+
+  .work-report-delete-actions button {
+    width: 100%;
+  }
+
+  .work-report-toast {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    min-width: 0;
+    max-width: none;
+  }
+}
+

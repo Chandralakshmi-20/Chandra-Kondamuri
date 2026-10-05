@@ -1,0 +1,1230 @@
+
+/* =========================================================
+   PROJECTS PAGE
+   ========================================================= */
+
+.projects-page {
+  width: 100%;
+}
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.projects-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.projects-toolbar .text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.projects-toolbar .text-button:hover {
+  background: #4338ca;
+  box-shadow:
+    0 2px 6px rgba(79, 70, 229, 0.18);
+}
+
+.projects-toolbar .text-button:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   SAVE PROJECT BUTTON
+   Same colour/style as Apply Leave
+   ========================================================= */
+
+.projects-page .project-save-button,
+.project-save-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 40px !important;
+  padding: 10px 18px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+.projects-page .project-save-button:hover:not(:disabled),
+.project-save-button:hover:not(:disabled) {
+  background: #4338ca !important;
+  box-shadow:
+    0 2px 6px rgba(79, 70, 229, 0.18) !important;
+}
+
+.projects-page .project-save-button:active:not(:disabled),
+.project-save-button:active:not(:disabled) {
+  transform: translateY(1px) !important;
+}
+
+.projects-page .project-save-button:disabled,
+.project-save-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   UPDATE PROGRESS BUTTON
+   Same colour/style as Apply Leave
+   ========================================================= */
+
+.projects-page .project-progress-update-button,
+.project-progress-update-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 40px !important;
+  padding: 10px 18px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+.projects-page .project-progress-update-button:hover:not(:disabled),
+.project-progress-update-button:hover:not(:disabled) {
+  background: #4338ca !important;
+  box-shadow:
+    0 2px 6px rgba(79, 70, 229, 0.18) !important;
+}
+
+.projects-page .project-progress-update-button:active:not(:disabled),
+.project-progress-update-button:active:not(:disabled) {
+  transform: translateY(1px) !important;
+}
+
+.projects-page .project-progress-update-button:disabled,
+.project-progress-update-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   PROJECT FORM
+   ========================================================= */
+
+.project-form-panel {
+  margin-bottom: 20px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 22px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.project-form-header h2,
+.project-form-header h3 {
+  margin: 0;
+  color: #172033;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.project-form-header p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.project-form-panel form {
+  padding: 22px;
+}
+
+.project-form-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
+  gap: 20px;
+}
+
+.project-description-field {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.projects-page .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.projects-page .form-group label {
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.projects-page .form-group label .required {
+  color: #dc2626;
+  margin-left: 3px;
+}
+
+.projects-page .form-group input,
+.projects-page .form-group select,
+.projects-page .form-group textarea {
+  width: 100%;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #172033;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.projects-page .form-group input::placeholder,
+.projects-page .form-group textarea::placeholder {
+  color: #98a2b3;
+}
+
+.projects-page .form-group input:hover,
+.projects-page .form-group select:hover,
+.projects-page .form-group textarea:hover {
+  border-color: #b8c0cc;
+}
+
+.projects-page .form-group input:focus,
+.projects-page .form-group select:focus,
+.projects-page .form-group textarea:focus {
+  border-color: #6366f1;
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.projects-page .form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.projects-page .form-group small {
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   EMPLOYEE SELECTION
+   ========================================================= */
+
+.employee-selection-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-height: 190px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.employee-selection-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.employee-selection-list::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 999px;
+}
+
+.employee-selection-list::-webkit-scrollbar-thumb {
+  background: #d0d5dd;
+  border-radius: 999px;
+}
+
+.employee-selection-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 500 !important;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.employee-selection-item:hover {
+  background: #f3f4ff;
+  border-color: #d9d6fe;
+}
+
+.employee-selection-item.selected {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+  color: #3730a3;
+}
+
+.employee-selection-item input[type="checkbox"] {
+  width: 16px !important;
+  height: 16px;
+  min-height: 16px !important;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  accent-color: #4f46e5;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.employee-selection-item span {
+  line-height: 1.4;
+}
+
+.employee-selection-empty {
+  padding: 12px;
+  color: #667085;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.project-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #eef0f3;
+}
+
+.project-form-actions button {
+  min-height: 40px;
+  padding: 9px 15px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-form-actions button[type="button"] {
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #344054;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project-form-actions button[type="button"]:hover {
+  background: #f8fafc;
+  border-color: #b8c0cc;
+}
+
+/* =========================================================
+   SAVE PROJECT
+   Same style as Add Project
+   ========================================================= */
+
+.project-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid #c7d2fe !important;
+  border-radius: 8px !important;
+  background: #eef2ff !important;
+  color: #4338ca !important;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-save-button:hover:not(:disabled) {
+  background: #e0e7ff !important;
+  border-color: #a5b4fc !important;
+  box-shadow:
+    0 2px 6px rgba(67, 56, 202, 0.08);
+}
+
+.project-save-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.project-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   PROJECT TABLE
+   ========================================================= */
+
+.project-table-wrapper,
+.projects-page .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e7eaf0;
+  border-radius: 12px;
+}
+
+.projects-page .data-table {
+  width: 100%;
+  min-width: 1100px;
+  border-collapse: collapse;
+}
+
+/* =========================================================
+   PROJECT TABLE HEADINGS
+   ========================================================= */
+
+.projects-page .data-table thead th {
+  padding: 14px 16px;
+  background: #f5f7ff;
+  border-bottom: 1px solid #dfe3f3;
+  color: #4f46e5;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.projects-page .data-table tbody td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #eef0f3;
+  color: #475467;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.projects-page .data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.projects-page .data-table tbody tr:hover {
+  background: #fafbff;
+}
+
+.projects-page .data-table td strong {
+  color: #172033;
+  font-weight: 700;
+}
+
+/* =========================================================
+   PROJECT DESCRIPTION
+   ========================================================= */
+
+.projects-page .data-table td:nth-child(2) {
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.projects-page .status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.projects-page .status-badge.success {
+  color: #15803d;
+  background: #ecfdf3;
+  border: 1px solid #bbf7d0;
+}
+
+.projects-page .status-badge.warning {
+  color: #c2410c;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.projects-page .status-badge.danger {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.projects-page .status-badge.not-started {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.projects-page .status-badge.info {
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+/* =========================================================
+   PROJECT COMPLETION
+   ========================================================= */
+
+.project-completion {
+  min-width: 140px;
+}
+
+.project-completion-label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.project-completion-label strong {
+  color: #172033;
+  font-size: 13px;
+}
+
+.project-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.project-progress-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* =========================================================
+   PROJECT ACTIONS
+   ========================================================= */
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.projects-page .project-actions .icon-button {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.projects-page .project-actions .icon-button svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+}
+
+/* VIEW */
+
+.projects-page .project-actions .icon-button:nth-child(1) {
+  color: #0891b2;
+}
+
+/* UPDATE PROGRESS */
+
+.projects-page .project-actions .icon-button:nth-child(2) {
+  color: #7c3aed;
+}
+
+/* EDIT */
+
+.projects-page .project-actions .icon-button:nth-child(3) {
+  color: #2563eb;
+}
+
+/* DELETE */
+
+.projects-page .project-actions .icon-button:nth-child(4) {
+  color: #dc2626;
+}
+
+.projects-page .project-actions .icon-button:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.48);
+  backdrop-filter: blur(2px);
+}
+
+.project-progress-overlay {
+  z-index: 1100;
+}
+
+/* =========================================================
+   PROJECT DETAILS MODAL
+   ========================================================= */
+
+.project-details-modal {
+  width: 100%;
+  max-width: 700px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 20px 60px rgba(16, 24, 40, 0.18);
+}
+
+.project-details-modal::-webkit-scrollbar {
+  width: 7px;
+}
+
+.project-details-modal::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.project-details-modal::-webkit-scrollbar-thumb {
+  background: #d0d5dd;
+  border-radius: 999px;
+}
+
+.project-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 22px 24px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.project-modal-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.project-modal-header p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PROJECT DESCRIPTION DETAILS
+   ========================================================= */
+
+.project-description {
+  margin: 0 24px 22px;
+  padding-top: 22px;
+}
+
+.project-detail-label {
+  display: block;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.project-description p {
+  margin: 7px 0 0;
+  color: #475467;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ASSIGNED EMPLOYEES
+   ========================================================= */
+
+.project-assigned-section {
+  margin: 0 24px 22px;
+}
+
+.assigned-employee-list {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
+  gap: 10px;
+  margin-top: 9px;
+}
+
+.assigned-employee-card {
+  padding: 12px 14px;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.assigned-employee-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.assigned-employee-info strong {
+  color: #172033;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.assigned-employee-info span {
+  color: #667085;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+.no-assigned-employees {
+  margin: 8px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* =========================================================
+   DETAILS GRID
+   ========================================================= */
+
+.project-status-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
+  gap: 12px;
+  margin: 0 24px 22px;
+}
+
+.project-status-grid > div {
+  padding: 14px;
+  border: 1px solid #eef0f3;
+  border-radius: 10px;
+  background: #fafbfc;
+}
+
+.project-status-value {
+  margin-top: 7px;
+}
+
+.project-details-value {
+  display: block;
+  margin-top: 6px;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   PROJECT PROGRESS DETAILS
+   ========================================================= */
+
+.project-progress-section {
+  margin: 0 24px 22px;
+  padding: 16px;
+  border: 1px solid #eef0f3;
+  border-radius: 10px;
+  background: #fafbfc;
+}
+
+.project-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.project-progress-header span {
+  color: #475467;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.project-progress-header strong {
+  color: #172033;
+  font-size: 14px;
+}
+
+.project-details-progress-track {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.project-details-progress-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* =========================================================
+   MODAL ACTIONS
+   ========================================================= */
+
+.project-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin: 0 24px;
+  padding: 18px 0 22px;
+  border-top: 1px solid #eef0f3;
+}
+
+.project-modal-actions button {
+  min-height: 40px;
+  padding: 9px 15px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-modal-actions button:not(
+    .project-progress-update-button
+  ) {
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #344054;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project-modal-actions button:not(
+    .project-progress-update-button
+  ):hover {
+  background: #f8fafc;
+  border-color: #b8c0cc;
+}
+
+/* =========================================================
+   UPDATE PROGRESS MODAL
+   ========================================================= */
+
+.progress-modal {
+  width: 100%;
+  max-width: 480px;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 20px 60px rgba(16, 24, 40, 0.18);
+  overflow: hidden;
+}
+
+.progress-modal .project-modal-header {
+  padding: 22px 24px;
+}
+
+.progress-project-info,
+.progress-current-value {
+  margin: 20px 24px 0;
+  padding: 13px 14px;
+  border: 1px solid #eef0f3;
+  border-radius: 10px;
+  background: #fafbfc;
+}
+
+.progress-current-value {
+  margin-top: 10px;
+}
+
+.progress-project-info span,
+.progress-current-value span {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.progress-project-info strong,
+.progress-current-value strong {
+  display: block;
+  margin-top: 6px;
+  color: #172033;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.progress-modal form {
+  padding-top: 20px;
+}
+
+/* =========================================================
+   PROGRESS FORM
+   ========================================================= */
+
+.progress-form-group {
+  margin: 0 24px 20px;
+}
+
+.progress-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.progress-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-input-group input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #172033;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.progress-input-group input:focus {
+  border-color: #6366f1;
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.progress-input-group strong {
+  color: #475467;
+  font-size: 15px;
+}
+
+/* =========================================================
+   PROGRESS PREVIEW
+   ========================================================= */
+
+.progress-preview {
+  margin: 0 24px 24px;
+  padding: 14px;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.progress-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.progress-preview-header span {
+  color: #475467;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.progress-preview-header strong {
+  color: #172033;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.progress-preview-track {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-preview-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 999px;
+  transition: width 0.2s ease;
+}
+
+/* =========================================================
+   UPDATE PROGRESS BUTTON
+   Same design language as Add Project / Save Project
+   ========================================================= */
+
+.project-progress-update-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid #c7d2fe !important;
+  border-radius: 8px !important;
+  background: #eef2ff !important;
+  color: #4338ca !important;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-progress-update-button:hover:not(:disabled) {
+  background: #e0e7ff !important;
+  border-color: #a5b4fc !important;
+  box-shadow:
+    0 2px 6px rgba(67, 56, 202, 0.08);
+}
+
+.project-progress-update-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.project-progress-update-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   CLOSE ICON
+   ========================================================= */
+
+.projects-page .icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #667085;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.projects-page .icon-button:hover {
+  background: #f8fafc;
+  border-color: #d0d5dd;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .project-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-description-field {
+    grid-column: auto;
+  }
+
+  .assigned-employee-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-status-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .project-details-modal {
+    max-width: 100%;
+    max-height: 92vh;
+  }
+
+  .project-modal-overlay {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-toolbar {
+    justify-content: stretch;
+  }
+
+  .projects-toolbar .text-button {
+    width: 100%;
+  }
+
+  .project-form-header {
+    padding: 18px;
+  }
+
+  .project-form-panel form {
+    padding: 18px;
+  }
+
+  .project-form-actions,
+  .project-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .project-form-actions button,
+  .project-modal-actions button {
+    width: 100%;
+  }
+
+  .project-modal-header {
+    padding: 18px;
+  }
+
+  .project-description,
+  .project-assigned-section,
+  .project-status-grid,
+  .project-progress-section {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .project-modal-actions {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .progress-modal {
+    max-width: 100%;
+  }
+
+  .progress-project-info,
+  .progress-current-value,
+  .progress-form-group,
+  .progress-preview {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .employee-selection-list {
+    max-height: 220px;
+  }
+
+  .employee-selection-item {
+    padding: 11px 10px;
+  }
+}
+
